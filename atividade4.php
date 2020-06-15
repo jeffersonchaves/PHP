@@ -1,5 +1,5 @@
 <?php
-//Atividade 1)A)
+//Atividade 4)A)
 $x = "10";
 $y = 10;
 echo ($x == $y)."<br>";
