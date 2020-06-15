@@ -52,10 +52,23 @@ echo $msg;
 
 <?php
 //F
-$busca = "nome";
-$troca = "Marinalva";
-$frase = "E ai, nome!";
-$msg = str_replace($busca, $troca, $frase);
-echo $msg;
-/*Resultado: E ai, Marinalva!*/
+$msg = "Oi, como foi seu dia?";
+echo strlen($msg) ."<br>";
+echo substr_count($msg, 'oi');
+/*Resultado: 21
+             1*/
 ?><br><br>
+
+<?php
+//G
+$msg = "abcdefghijklmnopqrstuvwxyz";
+echo substr($msg, 0, 1) ."<br>";
+echo substr($msg, 3, 5) ."<br>";
+echo substr($msg, 10, -2) ."<br>";
+echo substr($msg, strlen($msg) -2, 1);
+/*Resultado: a
+             defgh
+             klmnopqrstuvwx
+             y*/
+?><br><br>
+
