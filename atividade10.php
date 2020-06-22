@@ -101,6 +101,8 @@ switch ($bolo){
     break;
 //Resultado: Bolo de Chocolate
 }
+?><br><br>
+
 
 <?php
 //H
