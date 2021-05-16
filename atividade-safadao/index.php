@@ -1,26 +1,36 @@
 <?php
 error_reporting(0);
+ini_set("display_errors", 0 );
 
-global $mes;
-$dia = $_GET['dia'];
-$mes = $_GET['mes'];
-$ano = $_GET['ano'];
-$GLOBALS ['mes'];
-$safadeza = 0;
-$somatorio = 0;
-$anjo = 0;
+    $diastring = $_GET['dia'];
+    $messtring = $_GET['mes'];
+    $anostring = $_GET['ano'];
 
+    $dia = (int)$diastring;
+    $mes = (int)$messtring;
+    $ano = (int)$anostring;
+    
+    function somatorio($mes){
+        $valor = $mes;
+        $array[] = 0;
 
-$safadeza = somatorio($mes) + ($ano / 100) * (50 - $dia);
-$anjo = 100 - $safadeza;
-
-function somatorio(){
-    for ($i = $GLOBALS ['mes']; $i >= 0; $i--) {
-        $somatorio = $GLOBALS ['somatorio'] + $i;
+        for ($i = 0; $i < $valor; $i++) { 
+            $array[$i] = $mes;
+            $mes--;
+        }
+        return array_sum($array);
     }
-    return $somatorio;
-  }
-  
 
+    function safadeza($dia, $mes, $ano){
+        $valordia = 50 - $dia;
+        $valorano = $ano / 100;
+        
+        $safadao = $valordia + somatorio($mes) + $valorano;
+        $anjo = 100 - $safadao;
 
-require 'safadao.view.php';
+        echo "<p>Sua porcentagem de não anjo é: ".$safadao."</p>";
+        echo "<p>Sua porcentagem de anjo é: ".$anjo."</p>";
+    }
+
+    
+    require "safadao.view.php";

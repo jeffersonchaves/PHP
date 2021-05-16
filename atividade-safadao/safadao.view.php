@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de Fake News</title>
+    <title> Teste % Safadão</title>
 </head>
 <style>
-    body {
+        body {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 12px;
     }
@@ -20,32 +19,19 @@
         font-weight: bold;
     }
 
-    h1 {
-        text-align: center;
-        color: brown;
-        margin-top: 5%;
-    }
 </style>
-
 <body>
-
-    <form action="index.php" method="GET">
-        <div class="campo">
-            <label for="dia">Dia de nascimento:</label>
-            <input type="text" name="dia">
-
-            <label for="mes">Mês de nascimento:</label>
-            <input type="text" name="mes">
-
-            <label for="ano">Ano de nascimento:</label>
-            <input type="text" name="ano">
-
-
-            <input type="submit">
-        </div>
+    <h1> Preencha os campos abaixo: </h1>
+    
+    <form class="campo" action="index.php" method="GET">
+        <label><b>Dia de nascimento</b></label>
+        <input type="number" name="dia">
+        <label><b>Mês de nascimento (em número)</b></label>
+        <input type="number" name="mes">
+        <label><b>Ano de nascimento:</b></label>
+        <input type="number" name="ano">
+        <input type="submit">
     </form>
-<h1><?php print "$somatorio; <br>"; print $anjo?></h1>
-
+    <h2><?php echo safadeza($dia, $mes, $ano);?></h2>
 </body>
-
 </html>
