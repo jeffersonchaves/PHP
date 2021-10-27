@@ -2,7 +2,7 @@
 <?php
 //Atividade 1
 
-$_nome;
+$nome;
 $valor;
 $sid;
 $abc;
